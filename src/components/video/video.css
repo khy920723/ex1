@@ -1,0 +1,33 @@
+.videoContainer {
+  width: 20%;
+  padding: 4px;
+}
+
+.video {
+  width: 100%;
+  border: 1px solid #c0c0c0;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.video:hover {
+  transform: scale(1.01);
+  box-shadow: 3px 3px 5px 0px rgba(191, 191, 191, 0.53);
+}
+
+.thumimg {
+  width: 100%;
+}
+
+.titledate {
+  text-align: left;
+  padding: 16px;
+}
+
+.title {
+  font-size: 12px;
+}
+
+.channelTitle {
+  font-size: 11px;
+}
