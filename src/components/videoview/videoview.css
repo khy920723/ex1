@@ -1,0 +1,13 @@
+.viewbox {
+    width: 100%;
+}
+
+.viewbox .videoframe{
+    width: 100%;
+    height: 550px;
+    border: none;
+}
+
+.txtcontainer p{
+    font-size: 14px;
+}

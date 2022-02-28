@@ -7,8 +7,14 @@ function VideoList(props){
         <ul className="videolist">
             {
                 props.videoItems.map(videoItem => (
-                    <Video videoItem={videoItem
-                    } key={videoItem.etag} />
+                    <Video 
+                    videoItem={videoItem
+                    } 
+                    key={videoItem.etag} 
+                    // 한 번 더 프롭스로 내려줌
+                    onVideoClick={props.onVideoClick}
+                    display={props.display}
+                    />
                 ))
             }
         </ul>
