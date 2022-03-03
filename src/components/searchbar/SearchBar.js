@@ -2,7 +2,7 @@ import React from "react";
 import './searchbar.css';
 import { useRef } from "react";
 
-function SearchBar(props){
+function SearchBar(searchResult){
     const inputRef=useRef();
 
     // 서치버튼 클릭 시 호출 될 함수
@@ -10,7 +10,7 @@ function SearchBar(props){
     const searchFnc=()=>{
         // input의 value 값을 가져온다.
         const value=inputRef.current.value;
-        props.searchResult(value)
+        searchResult(value)
     }
     const inputClick=()=>{
         searchFnc();
@@ -27,6 +27,7 @@ function SearchBar(props){
     return (
         <div className="searchArea">
             <div className="logoarea">
+                <button className="btn-leftmenu"><i className="fa-solid fa-bars"></i></button>
                 <h1><img src="/images/logo.png" alt="youtube" className="logoimg" /></h1>
             </div>
             {/* 왼쪽 */}
@@ -39,11 +40,20 @@ function SearchBar(props){
                 <button className="searchbtn" onClick={inputClick}>
                     <img src="/images/searchicon.png" alt="search" />
                 </button>
+                <button className="micbtn">
+                    <i className="fa-solid fa-microphone"></i>
+                </button>
             </div>
             {/* 가운데 */}
             <div className="topmenuarea">
-                <button className="gridmenubtn">
-                    <img src="/images/gridmenuicon.png" alt="topmenu" />
+                <button className="btn-rightmenu">
+                    <i className="fa-solid fa-table-cells"></i>
+                </button>
+                <button className="btn-rightmenu">
+                    <i className="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+                <button className="btn-rightmenu">
+                    <i className="fa-solid fa-user"></i>
                 </button>
             </div>
             {/* 오른쪽 */}

@@ -1,18 +1,18 @@
 import React from "react";
 import "./videoview.css"
 
-function VideoView(props){
+function VideoView({video}){
     return (
         <div className="viewbox">
             <div className="playVideoBox">
-                <iframe type="text/html" className="videoframe" title="비디오플레이어" src={`http://www.youtube.com/embed/${props.video.id}`}
+                <iframe type="text/html" className="videoframe" title="비디오플레이어" src={`http://www.youtube.com/embed/${video.id}`}
                 ></iframe>
             </div>
             <div className="txtcontainer">
-                <h2>{props.video.snippet.title}</h2>
-                <h3>{props.video.snippet.channelTitle}</h3>
+                <h2>{video.snippet.title}</h2>
+                <h3>{video.snippet.channelTitle}</h3>
                 <p>
-                    {props.video.snippet.description}
+                    {video.snippet.description}
                 </p>
             </div>
         </div>

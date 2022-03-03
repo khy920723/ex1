@@ -12,6 +12,14 @@
   flex: 1 1 30%;
 }
 
+.contents-wrap{
+  display: flex;
+}
+
+.contents-wrap .sidebar{
+  flex: 0 0 70px;
+}
+
 @media screen and (max-width:1200px) {
   .content{flex-direction: column;}
 }

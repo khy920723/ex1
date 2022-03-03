@@ -2,18 +2,18 @@ import React from "react";
 import Video from "../video/Video";
 import './videolist.css'
 
-function VideoList(props){
+function VideoList({videoItems, onVideoClick, display}){
     return(
         <ul className="videolist">
             {
-                props.videoItems.map(videoItem => (
+                videoItems.map(videoItem => (
                     <Video 
                     videoItem={videoItem
                     } 
                     key={videoItem.etag} 
                     // 한 번 더 프롭스로 내려줌
-                    onVideoClick={props.onVideoClick}
-                    display={props.display}
+                    onVideoClick={onVideoClick}
+                    display={display}
                     />
                 ))
             }

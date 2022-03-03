@@ -21,9 +21,8 @@
 }
 
 .searchInput {
-  width: 500px;
+  width: 35vw;
   padding-left: 10px;
-  margin-right: 4px;
   border: 1px solid #dfdfdf;
   font-size: 14px;
   outline: none;
@@ -32,7 +31,10 @@
 .searchbtn {
   background-color: #f3f3f3;
   border: 1px solid #dfdfdf;
-  padding: 10px;
+  border-right: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+  border-top: 1px solid #dfdfdf;
+  width: 60px;height: 40px;
 }
 
 .searchbtn img {
@@ -47,4 +49,22 @@ button {
   background: none;
   outline: none;
   border: none;
+  cursor: pointer;
 }
+
+.micbtn{
+  padding: 10px;
+  margin-left: 4px;
+}
+
+.micbtn i {
+  color: #525252;
+  font-size: 20px;
+}
+
+.topmenuarea{display: flex;}
+.topmenuarea .btn-rightmenu {padding: 10px;margin-left: 8px;}
+.topmenuarea .btn-rightmenu i{color: #a7a5a5; font-size: 20px;}
+.logoarea{display: flex;}
+.logoarea .btn-leftmenu {padding: 10px;margin-right: 20px;}
+.logoarea .btn-leftmenu i{color: #a7a5a5;font-size: 20px;}
