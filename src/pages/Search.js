@@ -7,21 +7,15 @@ import VideoView from "../components/videoview/VideoView";
 const Search=({videoItems, onVideoClick, selectView})=>{
     return(
         <div className="contents-wrap">
-        <div className="sidebar">
-            <Menubar />
-        </div>
+            <div className="sidebar">
+                <Menubar />
+            </div>
         <div className="content"> 
-            {
-                selectView && (
-                <div className='view'>
-                    <VideoView video={selectView} /> 
-                </div>
-            )}
             <div className='list'>
                 <VideoList 
                 videoItems={videoItems} 
                 onVideoClick={onVideoClick} 
-                display={selectView ? 'rowlist':'collist'} />
+                display='rowlist' />
             </div>
         </div>
     </div>

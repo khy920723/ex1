@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import YoutubeService from './netservice/YoutubeService'
+
+// 변수로 환경변수의 API 키 받기 
+const youtube = new YoutubeService(process.env.REACT_APP_YOUTUBE_API_KEY);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App youtube={youtube} />
   </React.StrictMode>,
   document.getElementById('root')
 );

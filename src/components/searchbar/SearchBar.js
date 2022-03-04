@@ -1,16 +1,20 @@
 import React from "react";
 import './searchbar.css';
 import { useRef } from "react";
+// 페이지 전달을 위한 라이브러리
+import { Navigate, useNavigate, Link } from "react-router-dom";
 
-function SearchBar(searchResult){
+function SearchBar({searchResult}){
     const inputRef=useRef();
+    let navigate=useNavigate();
 
     // 서치버튼 클릭 시 호출 될 함수
     // enter 클릭 시 호출 공통 함수
     const searchFnc=()=>{
         // input의 value 값을 가져온다.
         const value=inputRef.current.value;
-        searchResult(value)
+        searchResult(value);
+        navigate(`/search?search_query=${value}`);
     }
     const inputClick=()=>{
         searchFnc();
@@ -28,7 +32,11 @@ function SearchBar(searchResult){
         <div className="searchArea">
             <div className="logoarea">
                 <button className="btn-leftmenu"><i className="fa-solid fa-bars"></i></button>
-                <h1><img src="/images/logo.png" alt="youtube" className="logoimg" /></h1>
+                <h1>
+                    <Link to="/">
+                        <img src="/images/logo.png" alt="youtube" className="logoimg" />
+                    </Link>
+                </h1>
             </div>
             {/* 왼쪽 */}
             <div className="searchInputArea">
