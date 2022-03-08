@@ -9,8 +9,7 @@ function VideoList({videoItems, onVideoClick, display, search}){
                 videoItems.map(videoItem => (
                     
                     <Video 
-                    videoItem={videoItem
-                    } 
+                    videoItem={videoItem} 
                     key={videoItem.etag} 
                     // 한 번 더 프롭스로 내려줌
                     onVideoClick={onVideoClick}

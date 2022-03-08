@@ -51,17 +51,16 @@ function App({youtube}) {
     setVideoItems(defaultVideos);
   }
 
-
   useEffect(()=>{
     sessionStorage.setItem('defaultVideos',JSON.stringify(defaultVideos));
     sessionStorage.setItem('selectedWatch',JSON.stringify(selectedWatch));
-  },[videoItems, selectView])
+  },[selectView])
 
 
   return (
   <div className="App">
     <BrowserRouter>
-      <SearchBar searchResult={search} />
+      <SearchBar searchResult={search} clickLogo={clickLogo} />
       <Routes>
         <Route path="/" element={<Home videoItems={videoItems} onVideoClick={selectVideo} selectView={selectView} />} />
         <Route path="/search" element={<Search videoItems={videoItems} onVideoClick={selectVideo} selectView={selectView} />} />

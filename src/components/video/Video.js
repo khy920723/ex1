@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import * as common from '../../common'
 
 
-function Video({videoItem, onVideoClick, display, search}){
+const Video = ({videoItem, onVideoClick, display, search}) => {
     const container='container';
     const displayClass=display==='rowlist' ? 'list-h':'list-v';
 
@@ -23,7 +23,10 @@ function Video({videoItem, onVideoClick, display, search}){
                             <p className="title">{videoItem.snippet.title}</p>
                             <p className="channel">{videoItem.snippet.channelTitle}</p>
                             <p className="publishDate"> {common.publishDate(videoItem.snippet.publishedAt)}</p>
-                            <p className="viewNum">댓글 {common.numberWithCommas(videoItem.statistics.commentCount)}개</p>
+                            {/* {
+                                !search && <p className="viewNum">댓글 {common.numberWithCommas(videoItem.statistics.commentCount)}개</p>
+                            } */}
+                            {search && <div className="description">{videoItem.snippet.description}</div>}
                         </div>
                     </div>
                 </div>

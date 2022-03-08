@@ -2,7 +2,8 @@ import React from "react";
 import './menubar.css';
 import { Link } from "react-router-dom";
 
-function Menubar(){
+// props로 받을 것이 없기 때문에 memo로 싸는 것이 의미 없음
+const Menubar = () => {
     return(
         <div className="menubar-area">
             <Link to="/">

@@ -1,9 +1,9 @@
 // 함수들만 뽑아내기 위한 common.js 파일
 
 
-export function numberWithCommas(num){
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-}
+export function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
 
 
 export function publishDate(publishDateValue){
