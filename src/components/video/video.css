@@ -53,11 +53,26 @@
   width: 36px;
   height: 36px;
 }
-
-.title {
-  font-size: 14px;
+.title,
+.channel {
+  margin: 0;
+  font-size: 0.925rem;
 }
-
-.channelTitle, .commentCount, .viewCount {
-  font-size: 11px;
+.channel,
+.publishDate,
+.viewNum {
+  font-size: 0.7rem;
+  color: #c0c0c0;
 }
+.title{
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  /* 영문 */
+  word-break: break-all;
+}
+.search>a{
+  width: 75%;
+  margin: auto; 
+  display: block;}

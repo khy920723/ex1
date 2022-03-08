@@ -11,7 +11,7 @@ function VideoView({video}){
             <div className="txtcontainer">
                 <h2>{video.snippet.title}</h2>
                 <h3>{video.snippet.channelTitle}</h3>
-                <p>
+                <p className="desc">
                     {video.snippet.description}
                 </p>
             </div>

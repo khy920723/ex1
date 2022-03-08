@@ -4,7 +4,7 @@ import { useRef } from "react";
 // 페이지 전달을 위한 라이브러리
 import { Navigate, useNavigate, Link } from "react-router-dom";
 
-function SearchBar({searchResult}){
+function SearchBar({searchResult, clickLogo}){
     const inputRef=useRef();
     let navigate=useNavigate();
 
@@ -34,11 +34,13 @@ function SearchBar({searchResult}){
                 <button className="btn-leftmenu"><i className="fa-solid fa-bars"></i></button>
                 <h1>
                     <Link to="/">
-                        <img src="/images/logo.png" alt="youtube" className="logoimg" />
+                        <img src="/images/logo.png" alt="youtube" className="logoimg"
+                        onClick={clickLogo} />
                     </Link>
                 </h1>
             </div>
             {/* 왼쪽 */}
+
             <div className="searchInputArea">
                 <input 
                 type="search" placeholder="검색" className="searchInput" 
@@ -53,6 +55,7 @@ function SearchBar({searchResult}){
                 </button>
             </div>
             {/* 가운데 */}
+            
             <div className="topmenuarea">
                 <button className="btn-rightmenu">
                     <i className="fa-solid fa-table-cells"></i>
